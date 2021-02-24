@@ -1,7 +1,28 @@
 
 
+/*** SCSS SASS ***/
+
 $font: 'proxima-nova', sans-serif;
 
+@mixin shadow($property) {
+  box-shadow: $property;
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+}
+
+@mixin tab(){
+  display: inline-table;
+  padding:15px 15px 15px 16px;
+  text-align: center;
+  border-right:1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+@mixin padding-mob() {
+  padding: 1px 2px 1px 1px;
+}
+
+/*** CSS ***/
 
 body{
   background: #cccccc;
@@ -15,9 +36,7 @@ body{
   background: white;
   margin-top: 200px;
   padding: 10px 0px 0px 0px;
-  box-shadow: 0px 0px 5px 1px rgba(100,100,100,0.75);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(100,100,100,0.75);
-  -moz-box-shadow: 0px 0px 5px 1px rgba(100,100,100,0.75);
+  @include shadow(0px 0px 5px 1px rgba(100,100,100,0.75));
   border-radius: 5px;
 }
 
@@ -94,22 +113,15 @@ table, td, th {
 }
 .table-temperature{
 
-  display: inline-table;
-  padding:15px 15px 15px 16px;
-  text-align: center;
-  border-right:1px solid #e0e0e0;
-  cursor: pointer;
+  @include tab();
+
 
 }
 
 .table-temperature-first{
   background: #f0f0f0;
   border-top:1px solid #a5a5a5;
-  display: inline-table;
-  padding:15px 15px 15px 16px;
-  text-align: center;
-  border-right:1px solid #e0e0e0;
-  cursor: pointer;
+  @include tab();
 }
 
 .table-temperature:hover{
@@ -121,11 +133,10 @@ table, td, th {
 
 @media screen and (max-width : 800px) {
   .table-temperature {
-
-    padding: 1px 2px 1px 1px;
+    @include padding-mob();
   }
   .table-temperature-first {
-    padding: 1px 2px 1px 1px;
+    @include padding-mob();
   }
   .detail-right{
     margin-left: auto;
