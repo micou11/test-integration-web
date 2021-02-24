@@ -64,7 +64,7 @@ b {
   font-size: 40px;
 }
 
-.module__detail--right {
+.detail-right {
   position: absolute;
   max-width: 100%;
   width: auto;
@@ -101,7 +101,7 @@ table, td, th {
   border-right: 1px solid #e0e0e0;
 }
 
-.table-temp {
+.table-temperature-first {
   background: #f0f0f0;
   border-top: 1px solid #a5a5a5;
   display: inline-table;
@@ -121,11 +121,11 @@ table, td, th {
     padding: 1px 2px 1px 1px;
   }
 
-  .table-temp {
+  .table-temperature-first {
     padding: 1px 2px 1px 1px;
   }
 
-  .module__detail--right {
+  .detail-right {
     margin-left: auto;
   }
 
